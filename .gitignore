@@ -1,0 +1,51 @@
+#################
+## Misc
+#################
+nbproject
+manifest.mf
+build.xml
+node_modules
+node_modules/*
+npm-debug.log
+src/**/*.js
+tests/**/*.js
+/index.js
+/ng-simlife.js
+config/testing-utils.js
+*.map
+*.d.ts
+!make.js
+!examples/**/*.js
+coverage
+**/*.metadata.json
+*.metadata.json
+/bundles
+/aot/
+*.tgz
+yarn-error.log
+
+#################
+## IDE
+#################
+.idea
+.project
+.settings
+.vscode
+ng-simlife.iml
+############
+## Windows
+############
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+############
+## Mac
+############
+
+# Mac crap
+.DS_Store
+**/.DS_Store
