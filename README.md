@@ -1,6 +1,6 @@
 [![Logo][simlife-image]][simlife-url]
 
-Greetings, Java Hipster!
+Greetings, Java Simlife!
 
 This is the Simlife Angular 2+ utilities library
 
