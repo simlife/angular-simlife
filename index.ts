@@ -22,7 +22,7 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateLoader, MissingTranslationHandler, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { SIM_PIPES, SIM_DIRECTIVES, SIM_COMPONENTS } from './src/sim-components';
+import { SIM_PIPES, SIM_DIRECTIVES, SIM_COMPONENTS, SIM_SERVICES } from './src/sim-components';
 import {
     SimMissingTranslationHandler,
     SimTranslateComponent,
@@ -30,7 +30,7 @@ import {
 } from './src/language';
 import { SimModuleConfig } from './src/config';
 import { SimConfigService } from './src/config.service';
-import { SimAlertService, SimPaginationUtil, SimResolvePagingParams } from './src/service';
+import { SimAlertService } from './src/service';
 
 // Re export the files
 export * from './src/pipe';
@@ -85,8 +85,8 @@ export class NgSimlifeModule {
         return {
             ngModule: NgSimlifeModule,
             providers: [
+                ...SIM_SERVICES,
                 { provide: SimLanguageService, useClass: SimLanguageService, deps: [TranslateService, SimConfigService] },
-                { provide: SimResolvePagingParams, useClass: SimResolvePagingParams, deps: [SimPaginationUtil] },
                 { provide: SimAlertService, useClass: SimAlertService, deps: [Sanitizer, SimConfigService, TranslateService] },
                 { provide: SimModuleConfig, useValue: moduleConfig },
                 { provide: SimConfigService, useClass: SimConfigService, deps: [SimModuleConfig] }

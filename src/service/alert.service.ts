@@ -35,9 +35,7 @@ export interface SimAlert {
     close?: (alerts: SimAlert[]) => void;
 }
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class SimAlertService {
 
     private alertId: number;

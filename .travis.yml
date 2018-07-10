@@ -2,7 +2,7 @@ os:
   - linux
 language: node_js
 node_js:
-  - "8.10.0"
+  - "6.9.2"
 cache:
   directories:
     - $HOME/.npm
@@ -20,7 +20,10 @@ before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH=$HOME/.yarn/bin:$PATH
 install:
-  - yarn install
+  - yarn
+
+before_script:
+  - npm prune
 script:
   - yarn run lint
   - yarn test

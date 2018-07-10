@@ -43,6 +43,7 @@ describe('SimBooleanComponent test', () => {
         TestBed.configureTestingModule({
             declarations: [SimBooleanComponent],
             providers: [
+                SimBooleanComponent,
                 {
                     provide: SimConfigService,
                     useValue: new SimConfigService({defaultI18nLang: 'en', i18nEnabled: true})

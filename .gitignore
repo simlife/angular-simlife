@@ -22,7 +22,6 @@ coverage
 /bundles
 /aot/
 *.tgz
-yarn-error.log
 
 #################
 ## IDE
@@ -31,7 +30,7 @@ yarn-error.log
 .project
 .settings
 .vscode
-ng-simlife.iml
+
 ############
 ## Windows
 ############

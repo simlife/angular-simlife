@@ -21,9 +21,7 @@ import { Injectable } from '@angular/core';
 /**
  * An utility service for link parsing.
  */
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class SimParseLinks {
 
     constructor() {}

@@ -22,9 +22,7 @@ import { Injectable } from '@angular/core';
 /**
  * An utility service for date.
  */
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class SimDateUtils {
 
     private pattern = 'yyyy-MM-dd';

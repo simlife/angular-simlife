@@ -26,8 +26,6 @@ import {
     SimTruncateWordsPipe
 } from './pipe';
 import {
-    SimMaxValidatorDirective,
-    SimMinValidatorDirective,
     SimMaxbytesValidatorDirective,
     SimMinbytesValidatorDirective,
     SimSortDirective,
@@ -37,6 +35,14 @@ import {
     SimItemCountComponent,
     SimBooleanComponent
 } from './component';
+import {
+    SimDataUtils,
+    SimDateUtils,
+    SimEventManager,
+    SimParseLinks,
+    SimPaginationUtil,
+    SimBase64Service
+} from './service';
 
 export const SIM_PIPES = [
     SimCapitalizePipe,
@@ -49,8 +55,6 @@ export const SIM_PIPES = [
 ];
 
 export const SIM_DIRECTIVES = [
-    SimMaxValidatorDirective,
-    SimMinValidatorDirective,
     SimMaxbytesValidatorDirective,
     SimMinbytesValidatorDirective,
     SimSortDirective,
@@ -60,4 +64,13 @@ export const SIM_DIRECTIVES = [
 export const SIM_COMPONENTS = [
     SimItemCountComponent,
     SimBooleanComponent
+];
+
+export const SIM_SERVICES = [
+    SimDataUtils,
+    SimDateUtils,
+    SimEventManager,
+    SimParseLinks,
+    SimPaginationUtil,
+    SimBase64Service
 ];

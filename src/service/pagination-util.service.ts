@@ -21,9 +21,7 @@ import { Injectable } from '@angular/core';
 /**
  * An utility service for pagination
  */
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class SimPaginationUtil  {
 
     constructor() {}

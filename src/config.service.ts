@@ -19,9 +19,7 @@
 import { Injectable } from '@angular/core';
 import { SimModuleConfig } from './config';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class SimConfigService {
     CONFIG_OPTIONS: SimModuleConfig;
 

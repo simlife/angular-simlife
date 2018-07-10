@@ -28,8 +28,8 @@ export class SimSortDirective {
     @Input() callback: Function;
 
     sortIcon = 'fa-sort';
-    sortAscIcon = 'fa-sort-up';
-    sortDescIcon = 'fa-sort-down';
+    sortAscIcon = 'fa-sort-asc';
+    sortDescIcon = 'fa-sort-desc';
     sortIconSelector = 'span.fa';
 
     @Output() predicateChange: EventEmitter<any> = new EventEmitter();

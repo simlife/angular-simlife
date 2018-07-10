@@ -46,6 +46,7 @@ describe('SimItemCountComponent test', () => {
             declarations: [SimItemCountComponent, SimTranslateComponent],
             imports: [TranslateModule.forRoot()],
             providers: [
+                SimItemCountComponent,
                 {
                     provide: SimConfigService,
                     useValue: new SimConfigService({defaultI18nLang: 'en', i18nEnabled: true})

@@ -21,9 +21,7 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { SimEventManager } from '../../src/service/event-manager.service';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 class SpyService {
   called = false;
 }

@@ -27,8 +27,8 @@ export class SimSortByDirective implements AfterViewInit {
 
     @Input() simSortBy: string;
 
-    sortAscIcon = 'fa-sort-up';
-    sortDescIcon = 'fa-sort-down';
+    sortAscIcon = 'fa-sort-asc';
+    sortDescIcon = 'fa-sort-desc';
 
     simSort: SimSortDirective;
 

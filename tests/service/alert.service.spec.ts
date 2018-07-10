@@ -29,6 +29,7 @@ describe('Alert service test', () => {
             TestBed.configureTestingModule({
                 imports: [TranslateModule.forRoot()],
                 providers: [
+                    SimAlertService,
                     {
                         provide: SimConfigService,
                         useValue: new SimConfigService({defaultI18nLang: 'en', i18nEnabled: true})

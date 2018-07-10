@@ -21,9 +21,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { SimConfigService } from '../config.service';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class SimLanguageService {
 
     currentLang = 'en';

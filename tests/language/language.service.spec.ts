@@ -16,7 +16,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-import { TestBed, inject, async } from '@angular/core/testing';
+import { TestBed, inject } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { SimLanguageService } from '../../src/language/language.service';
@@ -27,6 +27,7 @@ describe('LanguageService Test', () => {
         TestBed.configureTestingModule({
             imports: [TranslateModule.forRoot()],
             providers: [
+                SimLanguageService,
                 {
                     provide: SimConfigService,
                     useValue: new SimConfigService({})
@@ -36,15 +37,15 @@ describe('LanguageService Test', () => {
         });
     });
 
-    it('should change Language', async(inject([SimLanguageService], (service: SimLanguageService) => {
+    it('should change Language', inject([SimLanguageService], (service: SimLanguageService) => {
         service.changeLanguage('fr');
-        service.getCurrent().then((language) => expect(language).toEqual('fr'));
-    })));
+        expect(service.getCurrent()).toEqual(Promise.resolve('fr'));
+    }));
 
-    it('should retain changed language even after force refresh', async(inject([SimLanguageService], (service: SimLanguageService) => {
+    it('should retain changed language even after force refresh', inject([SimLanguageService], (service: SimLanguageService) => {
         service.changeLanguage('fr');
         service.init();
-        service.getCurrent().then((language) => expect(language).toEqual('fr'));
-    })));
+        expect(service.getCurrent()).toEqual(Promise.resolve('fr'));
+    }));
 
 });

@@ -19,9 +19,7 @@
 /* tslint:disable:no-bitwise */
 import { Injectable } from '@angular/core';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class SimBase64Service {
     private keyStr: string = 'ABCDEFGHIJKLMNOP' +
         'QRSTUVWXYZabcdef' +
